@@ -53,7 +53,7 @@ import os
 # copyfile('test.txt', 'file_Z.txt')
 
 # problem 8 
-# path = 'C:\\Users\\LENOVO\\Desktop\\pp2-22B050871\\'
+# path = 'C:\\Users\\Huawei\\OneDrive\\pp2-22B050872\\'
 # if os.access(path, os.F_OK) and (os.path.isfile('delete.txt')):
 #    os.remove('delete.txt')
 #    print('ok')

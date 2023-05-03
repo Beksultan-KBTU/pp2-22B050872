@@ -19,7 +19,7 @@ GRAY = (128,128,128)
 # Setting Title
 pygame.display.set_caption('Paint')
 
-def roundline(canvas, color, start, end, radius=1):
+def roundline(canvas, color, start, end, radius = 1):
     Xaxis = end[0] - start[0]
     Yaxis = end[1] - start[1]
     dist = max(abs(Xaxis), abs(Yaxis))
@@ -36,7 +36,7 @@ def draw_rect(screen, color, start, end, width = radius):
     widthr = abs(x1 - x2)
     pygame.draw.rect(screen, color, (x1, min(y1, y2), widthr, height), width)
 
-def draw_circ(screen, colour, pos, center, width=radius):
+def draw_circ(screen, colour, pos, center, width = radius):
     x1, y1 = center
     x2, y2 = pos
     radius_circ = int(math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2))
@@ -54,9 +54,8 @@ def draw_right(screen, colour, start, end, width = radius):
     x, y = start[0], start[1]
     x1, y1 = end[0], end[1]
     x2, y2 = x, y1
-    points = [(x,y) , (x1,y1) , (x2,y2)]
+    points = [(x, y), (x1, y1), (x2, y2)]
     pygame.draw.polygon(screen, colour, points, width)
-
 
 def draw_rhombus(screen, colour, start, end, width = radius):
     x, y = start[0], start[1]
@@ -118,17 +117,17 @@ def main():
             #When mouse button released it will stop drawing
             if event.type == pygame.MOUSEBUTTONUP :
                 if isRect:
-                    draw_rect(SCREEN,  color, r_last_pos , event.pos)
+                    draw_rect(SCREEN, color, r_last_pos, event.pos)
                 elif isCirc:
-                    draw_circ(SCREEN, color , event.pos, center)
+                    draw_circ(SCREEN, color, event.pos, center)
                 elif isSquare:
-                    draw_square(SCREEN,  color, r_last_pos , event.pos)
+                    draw_square(SCREEN, color, r_last_pos, event.pos)
                 elif isRightTr:
-                    draw_right(SCREEN,  color, r_last_pos, event.pos)
+                    draw_right(SCREEN, color, r_last_pos, event.pos)
                 elif isRhomb:
-                    draw_rhombus(SCREEN,  color, r_last_pos, event.pos)
+                    draw_rhombus(SCREEN, color, r_last_pos, event.pos)
                 elif isEquil:
-                    draw_equil(SCREEN,  color, r_last_pos, event.pos)
+                    draw_equil(SCREEN, color, r_last_pos, event.pos)
                 draw_on = False
             #It will draw a continuous circle with the help of roundline function.
             if event.type == pygame.MOUSEMOTION :

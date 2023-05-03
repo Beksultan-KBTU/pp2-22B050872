@@ -16,13 +16,13 @@ print(next(a))
 '''
 
 # problem 3
-'''
-n = int(input())
-def divisibility(n):
-    return(x for x in range(n + 1) if(x % 12 == 0))
-for i in divisibility(n):
-    print(i)
-'''
+# n = int(input())
+# x = lambda x: x if (x % 12 == 0) else "$"
+# a = (x(i) for i in range(n + 1))
+# for i in range(n + 1):
+#     y = next(a)
+#     if (y != "$"):
+#         print(y)
 
 #problem 4
 '''

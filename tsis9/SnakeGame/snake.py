@@ -92,13 +92,6 @@ class Snake:
         if food.location.y != self.body[0].y:
             return False
         return True
-             
-    def check_collision_wall(self, wall):# checking whether snake collides with the screen's boarder
-        if wall.location.x != self.body[0].x: 
-            return False
-        if wall.location.y != self.body[0].y:
-            return False
-        return True
     
     def border(self): # if thw snake leaves playing area
         if self.body[0].x > WIDTH // BLOCK_SIZE:

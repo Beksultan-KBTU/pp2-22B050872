@@ -3,6 +3,9 @@ import json
 with open("sample-data.json", "r") as file:
 	data = json.load(file)
 
+with open("sample-data.json", "w") as file:
+    data = json.dump(file)
+
 print("Interface status")
 print("=" * 80)
 print("DN", " " * 40, "Description ", " " * 8,  "speed", " " * 8, "MTU")
